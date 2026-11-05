@@ -71,7 +71,3 @@ supabase/.env
 
 # Generated files
 app/IMPLEMENTATION_SUMMARY.md
-
-# Documentation (optional - keep local)
-GIT_COMMIT_GUIDELINES_TERMINAL.md
-SYSTEM_OVERVIEW.md
