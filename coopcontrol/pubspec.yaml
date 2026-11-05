@@ -1,0 +1,44 @@
+name: coopcontrol
+description: "CoopControl - Automated poultry feed and water management system"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # Supabase
+  supabase_flutter: ^2.8.2
+
+  # Local notifications
+  flutter_local_notifications: ^18.0.1
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # Internationalization
+  intl: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
