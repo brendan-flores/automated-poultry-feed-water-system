@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#2e312f", "on-surface-variant": "#40493d", "secondary": "#005faf", "on-tertiary-fixed": "#2a1800", "on-error": "#ffffff", "on-primary-fixed-variant": "#005312", "tertiary-fixed-dim": "#ffb957", "secondary-container": "#54a0fe", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#643f00", "on-tertiary": "#ffffff", "on-primary-container": "#cbffc2", "primary-container": "#2e7d32", "surface-container-low": "#f3f4f1", "on-secondary-fixed": "#001c3a", "tertiary": "#774c00", "primary": "#0d631b", "primary-fixed": "#a3f69c", "outline": "#707a6c", "secondary-fixed-dim": "#a5c8ff", "background": "#f9faf7", "surface-container-high": "#e7e8e6", "tertiary-fixed": "#ffddb5", "surface-container-lowest": "#ffffff", "surface": "#f9faf7", "surface-bright": "#f9faf7", "tertiary-container": "#986200", "error": "#ba1a1a", "on-surface": "#191c1b", "error-container": "#ffdad6", "on-secondary-container": "#003567", "surface-variant": "#e2e3e0", "primary-fixed-dim": "#88d982", "on-background": "#191c1b", "outline-variant": "#bfcaba", "inverse-primary": "#88d982", "surface-container-highest": "#e2e3e0", "on-primary-fixed": "#002204", "surface-tint": "#1b6d24", "surface-container": "#edeeeb", "on-secondary-fixed-variant": "#004786", "on-tertiary-container": "#ffeede", "inverse-on-surface": "#f0f1ee", "secondary-fixed": "#d4e3ff", "surface-dim": "#d9dad7", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-tablet": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin-tablet": "2rem", "space-md": "1rem", "margin": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2rem" }, fontFamily: { "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "headline-metric-lg-mobile": ["Inter"], "label-lg": ["Inter"], "headline-metric-lg": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-metric-lg-mobile": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-metric-lg": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_1px_3px_rgba(0,0,0,0.12)]"><span class="material-symbols-outlined text-[22px]">nest_eco_leaf</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">CoopControl</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Alerts</h1></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-[96px]"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Telemetric Status</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Alerts</h2>
+</div>
+<button class="h-10 px-space-md rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-1.5 shadow-sm active:scale-95 duration-150" id="clear-non-crit-btn" onclick="clearNonCritical()">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span class="font-label-md text-label-md">Clear Info</span>
+</button>
+</div>
+<!-- Filter Segmented Control -->
+<div class="flex p-1 bg-surface-container rounded-full w-full select-none">
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" id="tab-active" onclick="switchFilter('active')">
+        Active (3)
+      </button>
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all" id="tab-history" onclick="switchFilter('history')">
+        History (5)
+      </button>
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all" id="tab-empty" onclick="switchFilter('empty')">
+        Empty State
+      </button>
+</div>
+<!-- Alert Summary Banner -->
+<div class="bg-error-container text-on-error-container rounded-xl p-space-md shadow-sm flex items-start gap-space-sm transition-all duration-300" id="priority-banner">
+<div class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-error font-bold">Action Needed</span>
+<span class="font-label-md text-label-md text-on-error-container/70">Coop East #02</span>
+</div>
+<p class="font-body-md text-body-md text-on-error-container mt-0.5">Water safety interlock active. Pump disabled until refilled.</p>
+</div>
+</div>
+<!-- Alerts Stack View -->
+<div class="flex flex-col gap-space-md" id="alerts-container">
+<!-- 1. Amber Warning Card -->
+<article class="alert-item group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-200" data-severity="warning" data-status="active" id="alert-1">
+<div class="flex">
+<div class="w-1.5 bg-tertiary-fixed-dim shrink-0"></div>
+<div class="p-space-md flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary font-bold tracking-wide">Warning</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">15 min ago</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Hopper is low – refill feed soon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Estimated 1 feeding remaining in the silo reservoir.</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">scale</span>
+<span>Level: 14% (0.4 kg)</span>
+</div>
+<button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="dismissAlert('alert-1')">
+<span>Acknowledge</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- 2. Red Critical Card -->
+<article class="alert-item group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-200" data-severity="critical" data-status="active" id="alert-2">
+<div class="flex">
+<div class="w-1.5 bg-error shrink-0"></div>
+<div class="p-space-md flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-error font-bold tracking-wide">Critical</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">1 hour ago</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Reservoir water is low – pump paused</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Pump auto-shutoff activated to prevent dry run burn-in.</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Dry-run lock on
+              </span>
+<button class="h-9 px-4 rounded-full bg-error text-on-error font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-all" onclick="resolveCritical('alert-2')">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Reset Pump</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- 3. Green Info Card -->
+<article class="alert-item group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-200" data-severity="info" data-status="history" id="alert-3">
+<div class="flex">
+<div class="w-1.5 bg-primary shrink-0"></div>
+<div class="p-space-md flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-on-primary-container/40 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold tracking-wide">Completed</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Today, 6:02 AM</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Feeding completed: 300 g dispensed</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Tray weight reached target in 14 seconds via sunrise rule.</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span>Discharge normal</span>
+</div>
+<button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="dismissAlert('alert-3')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Dismiss</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- 4. Red Critical History Card -->
+<article class="alert-item group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-200" data-severity="critical" data-status="history" id="alert-4">
+<div class="flex">
+<div class="w-1.5 bg-error shrink-0"></div>
+<div class="p-space-md flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-error font-bold tracking-wide">Resolved</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Yesterday, 5:01 PM</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Feeding failed – timed out</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Auger jam detected, cleared automatically on reverse cycle.</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Auto-recovered</span>
+<button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="dismissAlert('alert-4')">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+<span>Archive</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- 5. Neutral Offline Card -->
+<article class="alert-item group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-200" data-severity="neutral" data-status="history" id="alert-5">
+<div class="flex">
+<div class="w-1.5 bg-outline shrink-0"></div>
+<div class="p-space-md flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[18px]">cloud_off</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-outline font-bold tracking-wide">Telemetry</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Yesterday, 2:15 PM</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Device went offline</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Reconnected after 4 minutes. Cached logs synchronized.</p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-outline">Signal: restored -64 dBm</span>
+<button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="dismissAlert('alert-5')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Dismiss</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Container -->
+<div class="hidden flex-col items-center justify-center py-space-xl px-space-md text-center bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-300" id="empty-state-view">
+<div class="relative w-28 h-28 mb-space-md flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-primary-fixed/30 animate-pulse"></div>
+<div class="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-md relative z-10">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor" stroke="none"></path>
+</svg>
+</div>
+<div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">nest_eco_leaf</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-on-primary-container/40 text-primary font-label-caps text-label-caps uppercase tracking-wider mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        Coop Tranquil &amp; Balanced
+      </div>
+<h3 class="font-headline-md text-headline-md text-on-surface">All good! No alerts.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">
+        Your feed hopper, water reservoir, and automated schedules are running smoothly.
+      </p>
+<div class="w-full mt-6 pt-6 bg-surface-container-low rounded-lg p-space-md flex items-center justify-around gap-2">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-primary">84%</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Feed Silo</span>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-secondary">92%</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Water Tank</span>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">06:00</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Next Feed</span>
+</div>
+</div>
+<button class="mt-6 h-12 w-full rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-98 transition-all" onclick="switchFilter('active')">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span>Simulate Active Alerts</span>
+</button>
+</div>
+<!-- Cooperative Device Status Footer Card -->
+<div class="bg-surface-container rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Telemetry Mesh Connected</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Mesh ID: HUB-CHICK-812</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">99.8% Up</span>
+</div>
+</div>
+</div>
+<script>
+  let currentFilter = 'active';
+
+  function switchFilter(type) {
+    currentFilter = type;
+    const tabActive = document.getElementById('tab-active');
+    const tabHistory = document.getElementById('tab-history');
+    const tabEmpty = document.getElementById('tab-empty');
+    const alertsContainer = document.getElementById('alerts-container');
+    const emptyStateView = document.getElementById('empty-state-view');
+    const priorityBanner = document.getElementById('priority-banner');
+
+    const inactiveClasses = 'flex-1 py-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all';
+    const activeClasses = 'flex-1 py-2 rounded-full font-label-md text-label-md text-center bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all';
+
+    tabActive.className = inactiveClasses;
+    tabHistory.className = inactiveClasses;
+    tabEmpty.className = inactiveClasses;
+
+    if (type === 'active') {
+      tabActive.className = activeClasses;
+      emptyStateView.classList.add('hidden');
+      alertsContainer.classList.remove('hidden');
+      priorityBanner.classList.remove('hidden');
+      
+      const cards = alertsContainer.querySelectorAll('.alert-item');
+      cards.forEach(card => {
+        if (card.getAttribute('data-status') === 'active') {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    } else if (type === 'history') {
+      tabHistory.className = activeClasses;
+      emptyStateView.classList.add('hidden');
+      alertsContainer.classList.remove('hidden');
+      priorityBanner.classList.add('hidden');
+
+      const cards = alertsContainer.querySelectorAll('.alert-item');
+      cards.forEach(card => card.classList.remove('hidden'));
+    } else if (type === 'empty') {
+      tabEmpty.className = activeClasses;
+      alertsContainer.classList.add('hidden');
+      priorityBanner.classList.add('hidden');
+      emptyStateView.classList.remove('hidden');
+      emptyStateView.classList.add('flex');
+    }
+  }
+
+  function dismissAlert(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.opacity = '0';
+    el.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      el.remove();
+      checkRemaining();
+    }, 200);
+  }
+
+  function resolveCritical(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const btn = el.querySelector('button');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> <span>Restarting...</span>';
+    btn.disabled = true;
+    setTimeout(() => {
+      el.setAttribute('data-status', 'history');
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.remove();
+        document.getElementById('priority-banner')?.classList.add('hidden');
+        checkRemaining();
+      }, 250);
+    }, 1200);
+  }
+
+  function clearNonCritical() {
+    const nonCrit = document.querySelectorAll('.alert-item[data-severity="info"], .alert-item[data-severity="neutral"]');
+    nonCrit.forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'scale(0.95)';
+      setTimeout(() => item.remove(), 200);
+    });
+    setTimeout(checkRemaining, 250);
+  }
+
+  function checkRemaining() {
+    const remaining = document.querySelectorAll('.alert-item');
+    if (remaining.length === 0) {
+      switchFilter('empty');
+    }
+  }
+
+  // Initial render state
+  document.addEventListener('DOMContentLoaded', () => {
+    switchFilter('active');
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex items-center justify-around h-16 max-w-md mx-auto px-space-xs"><a class="flex flex-col items-center justify-center min-w-[72px] min-h-[48px] h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">lunch_dining</span><span class="font-label-md text-label-md mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[72px] min-h-[48px] h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="schedule" href="#"><span class="material-symbols-outlined text-[24px]">schedule</span><span class="font-label-md text-label-md mt-0.5">Schedule</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center min-w-[72px] min-h-[48px] h-full transition-colors text-primary-container font-semibold" data-path="alerts" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute -top-0.5 -right-1 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></div><span class="font-label-md text-label-md mt-0.5">Alerts</span></a></div></nav></body></html>
